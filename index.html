@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpKyx</title>
+    <style>
+        body {
+            background-color: #001a33; /* Dark blueish light like the sky */
+            color: white;
+            font-family: 'Titan One', cursive;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 100vh;
+            animation: stars 30s linear infinite;
+        }
+
+        @keyframes stars {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 1000px 1000px;
+            }
+        }
+
+        .navbar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin-bottom: 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .header {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .version {
+            font-size: 20px;
+        }
+
+        .images {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 40px);
+        }
+
+        .images img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        .star:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            width: 3px;
+            height: 3px;
+            animation: moveStar1 15s linear infinite alternate;
+        }
+
+        .star:nth-child(2) {
+            top: 20%;
+            left: 40%;
+            width: 2px;
+            height: 2px;
+            animation: moveStar2 20s linear infinite alternate;
+        }
+
+        .star:nth-child(3) {
+            top: 30%;
+            left: 60%;
+            width: 4px;
+            height: 4px;
+            animation: moveStar3 25s linear infinite alternate;
+        }
+
+        /* Add more star styles and animations as needed */
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes moveStar1 {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes moveStar2 {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(30px, 10px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes moveStar3 {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-20px, 30px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home">Home</a></li>
+           <li><a href="assignments">Assignments</a></li> 
+            <li><a href="upload">Upload</a></li>
+            <li><a href="ai">AI</a></li>
+            <li><a href="ask">Ask</a></li>
+            <li><a href="cheats">Cheats</a></li>
+          <li><a href="kyxweb.html">KyxWeb</a></li>
+        </ul>
+    </div>
+
+    <!-- Images -->
+    <div class="images">
+        <img src="ques.jpg" alt="Image 1">
+        <img src="ques.jpg" alt="Image 2">
+    </div>
+
+    <!-- Stars -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Add more stars as needed -->
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">HelpKyx</div>
+        <div class="version">Version 2.0</div>
+    </div>
+</body>
+</html>

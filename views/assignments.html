@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #assignments-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .assignment {
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .assignment h2 {
+            margin-top: 0;
+        }
+
+        .assignment p {
+            margin-bottom: 10px;
+        }
+
+        .assignment a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .assignment a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Assignments</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchAssignments()" placeholder="Search by title...">
+    </div>
+    <div id="assignments-list">
+        <% assignments.forEach(function(assignment) { %>
+            <div class="assignment">
+                <h2><%= assignment.assignmentName %></h2>
+                <p><%= assignment.description %></p>
+                <% if (assignment.fileUrl) { %>
+                    <p><a href="<%= assignment.fileUrl %>">Download File</a></p>
+                <% } %>
+                <p>Uploaded by: <%= assignment.username %> on <%= assignment.createdAt %></p>
+            </div>
+        <% }); %>
+    </div>
+
+    <script src="../models/assignment.js"></script>
+    <script>
+        function searchAssignments() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const assignments = document.getElementById('assignments-list').children;
+
+            for (let i = 0; i < assignments.length; i++) {
+                const assignment = assignments[i];
+                const title = assignment.querySelector('h2').innerText.toLowerCase();
+                if (title.includes(filter)) {
+                    assignment.style.display = 'block';
+                } else {
+                    assignment.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

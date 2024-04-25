@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KyxWeb</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* Dark background color */
+            padding: 10px 0;
+            z-index: 1000; /* Ensure navbar is on top */
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Center-align the navbar items */
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px; /* Adjust spacing between navbar items */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white; /* Text color */
+            font-size: 18px; /* Font size */
+            padding: 10px 20px; /* Padding around text */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .navbar a:hover {
+            background-color: #555; /* Darker background color on hover */
+        }
+
+        /* Full-page embed */
+        .embed-container {
+            position: absolute;
+            top: 50px; /* Adjust top position to make space for navbar */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 50px); /* Adjust height to fit the remaining space */
+        }
+
+        .embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="assignments">Assignments</a></li>
+            <li><a href="upload">Upload</a></li>
+            <li><a href="ai">AI</a></li>
+            <li><a href="ask">Ask</a></li>
+            <li><a href="cheats">Cheats</a></li>
+        </ul>
+    </div>
+
+    <!-- Full-page embed -->
+    <div class="embed-container">
+        <iframe src="https://foreverkyx.lavipet.info/" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
