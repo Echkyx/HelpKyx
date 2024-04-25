@@ -1,59 +1,54 @@
-Assignment Manager
-Has a unblocked web broswer and anytime it goes inactive or gets blocked we renew it.
-Description: A web app for managing assignments. Users can sign up, log in, upload assignments, and view them in one place.
+# Project Name
 
-Features:
-
-Secure sign-up and log-in
-Upload assignments with titles and descriptions
-View all assignments on one page
-Search for specific assignments by title
-Usage:
-
-Sign up for an account.
-Log in with your credentials.
-Upload your assignments.
-View all your assignments on the assignments page.
-Search for specific assignments by title.
-Getting Started:
-
-Clone the repository
-Install dependencies
-Set up a PostgreSQL database
-Run the server
-Contributing:
-Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
-
-License:
-This project is licensed under the MIT License.
+Assignment Manager Has a unblocked web broswer and anytime it goes inactive or gets blocked we renew it. Description: A web app for managing assignments. Users can sign up, log in, upload assignments, and view them in one place.
 
 
-User
-it cant be above 350
-ChatGPT
-Assignment Manager
+## Installation
 
-Description: A GitHub-based assignment manager web app. Users can sign up, log in, upload assignments, and view them in one place.
+1. **Clone the repository:**
 
-Features:
+   ```
+   git clone https://github.com/your-username/your-repository.git
+   ```
 
-Secure sign-up/log-in
-Upload assignments with titles/descriptions
-View all assignments on one page
-Search assignments by title
-Usage:
+2. **Navigate to the project directory:**
 
-Sign up, log in.
-Upload assignments.
-View/search assignments.
-Getting Started:
+   ```
+   cd your-repository
+   ```
 
-Clone repo, install dependencies.
-Set up PostgreSQL.
-Run the server.
-Contributing:
-Contributions welcome! Submit bug reports, feature requests, or pull requests.
+3. **Install dependencies:**
 
-License:
-MIT License.
+   ```
+   npm install
+   ```
 
+## Usage
+
+1. **Start the server:**
+
+   ```
+   node index.js
+   ```
+
+2. **Open a web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.**
+
+## Configuration
+
+If your project requires any configuration steps or environment variables, mention them here.
+
+## Contributing
+
+If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
+
+## License
+
+
+
+---
