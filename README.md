@@ -1,4 +1,4 @@
-# Project Name
+# HelpKyx
 
 Assignment Manager Has a unblocked web broswer and anytime it goes inactive or gets blocked we renew it. Description: A web app for managing assignments. Users can sign up, log in, upload assignments, and view them in one place.
 
